@@ -10,7 +10,7 @@ function Header() {
   return (
     <Navbar bg = "success" expand="lg">
       <Container fluid>
-        <Navbar.Brand as={Link} to ="/home">Ashok React</Navbar.Brand>
+        <Navbar.Brand as={Link} to ="/home">React App</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
