@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Header from './components/header.component'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import Home from './components/Home.component';
+import ToDo
+ from './components/ToDo.component';
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+<Router>
+  <Header />
+  <Routes>
+        <Route exact path="/home" element ={<Home />} />
+        <Route exact path="/to-do" element ={<ToDo />} />
+          </Routes>
+  </Router>
+  )
 }
 
 export default App;
