@@ -1,5 +1,4 @@
 import React from 'react';
-import HeroImage from './HeroImage.component';
 import { useState
  } from 'react';
 import Login from './Login.component';
