@@ -4,25 +4,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import Form from 'react-bootstrap/Form';
+import './../common/styles.css'
 
 function ToDoItems(props) {
     console.log(props.items);
     return (
-        <div className='d-flex justify-content-center p-2'>
             <ul>
                 {
                     props.items.map((toDoItem,index) => (
-                    <Form className="d-flex justify-content-center P-2">
                       <li key={toDoItem.id}>
-                       {toDoItem.value} </li> 
-                      <Button onClick={() => props.deleteToDo(toDoItem.id)}> <FontAwesomeIcon icon= {faTrash} /></Button>
-                     
-                      </Form>
+                        <div className = "d-flex justify-content-center p-2">
+                        <div className = "todo-content"><h6>{toDoItem.value}</h6></div>  
+                        <Button className = "todo-content" onClick={() => props.deleteToDo(toDoItem.id)}> Edit </Button>                   
+                        <Button onClick={() => props.deleteToDo(toDoItem.id)}> Delete </Button>
+                        </div>  
+                      </li>                  
                     ))
                 }
             </ul>
             
-        </div>
     );
 }
 

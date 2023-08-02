@@ -20,6 +20,7 @@ function Header() {
           >
             <Nav.Link as={Link} to ="/home">Home</Nav.Link>
             <Nav.Link as ={Link} to = "/to-do">To-Do</Nav.Link>
+            <Nav.Link as ={Link} to = "/weather">Weather</Nav.Link>
             <NavDropdown title="Link" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action4">

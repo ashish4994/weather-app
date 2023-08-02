@@ -1,5 +1,50 @@
+
 .hero-image {
     height: 400px;
     background-image: url('https://rapidapi.com/static-assets/default/homepageHeroUrlV2-3028d79c-29ac-4321-b1c2-ee12807bce91.svg');
     background-image: url('https://tomcolearchitect.com/wp-content/themes/tomcole/library/images/home-hero.png');
+}
+
+.todo-content{
+    margin-right: 10px;
+    padding-top : 6px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .weather-home{
+    text-align: center;
+    align-items: center;
+    background-image: url('./../../assets/nyc-image.jpg');
+    background-size : cover;
+    background-position: top;
+    height : 800px;
+  }
+
+  .weather-info{
+    padding: 100px;
+  }
+
+  .card-body{
+    background-color: wheat;
+  }
+
+  .card-items {
+    display:flex;
+    justify-content: center;
+    padding:50px;
+    gap:150px;
+    align-items: center;
+    background: beige;
+    margin: 50px 200px
+
+}
+
+.card-items-image{
+    height: 40px;
+
 }
