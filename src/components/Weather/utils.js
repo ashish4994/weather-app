@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-let api_key = '5cfbf9d5f31b0b9be27879ef35720d95';
+let api_key = 'xxxx';
 export default {
 
 getWeatherDataAxios : async(city) =>{
