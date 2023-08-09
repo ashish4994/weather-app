@@ -9,7 +9,7 @@ function ToDo() {
 
     const [item, setItem] = useState('');
     const [todoItems, setTodoItems] =useState([]);
-    let id = 0;
+    const [id,setId] = useState(1);
 
     const addItems = (e) =>{
       e.preventDefault();
@@ -18,11 +18,12 @@ function ToDo() {
         return;
       }
       let i = {
-        id : id++ ,
+        id : id,
         value : item
       }
       setTodoItems([...todoItems,i])
       setItem('');
+      setId(id+1);
 
     }
 
