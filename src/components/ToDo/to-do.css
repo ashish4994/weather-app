@@ -1,0 +1,55 @@
+.content{
+    width: 100%;
+    height: 100vh;
+    background-color:  dodgerblue;
+}
+
+.main{
+    max-width: 400px;
+    border: 1px solid red;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.form{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top:1rem;
+}
+
+.plus-button{
+border-radius: 10px;
+color: white;
+background-color: green;
+height: 100%;
+width: 50px;
+padding: 5px;
+border: 2px solid white;
+}
+
+.row1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 400px;
+    margin-top: 15px;
+    border: 2px dotted whitesmoke;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.item-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+input[type=checkbox]:checked + h5{
+    text-decoration: line-through;
+}

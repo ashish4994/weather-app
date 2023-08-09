@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import ToDoItems from './ToDoItems.component';
+import './to-do.css';
+import {AiOutlinePlus} from 'react-icons/ai';
 
 function ToDo() {
 
@@ -9,7 +11,8 @@ function ToDo() {
     const [todoItems, setTodoItems] =useState([]);
     let id = 0;
 
-    const addItems = () =>{
+    const addItems = (e) =>{
+      e.preventDefault();
       if(item == ''){
         alert('To Do Item is Empty');
         return;
@@ -20,6 +23,7 @@ function ToDo() {
       }
       setTodoItems([...todoItems,i])
       setItem('');
+
     }
 
     const deleteToDo = (item) =>{
@@ -29,20 +33,22 @@ function ToDo() {
 
     return (
         //Create input and add button 
-        <div>
-           <h2><center>React To Do List.</center></h2>
-          <Form className="d-flex justify-content-center">
+        <div className='content'>
+          <div className='main'>
+           <h2>React To Do List</h2>
+          <Form onSubmit={addItems} className="form">
             <Form.Control
               type="search"
               placeholder="Enter To Do Item"
-              className="me-2 w-auto"
+              className="me-2"
               aria-label="Search"
               value={item}
               onChange={e => setItem(e.target.value)}
             />
-            <Button onClick={addItems} variant="secondary">Add</Button>
+            <button type="submit" className='plus-button'><AiOutlinePlus /></button>
           </Form>
-        {todoItems.length > 0 ? <ToDoItems  items = {todoItems} deleteToDo={deleteToDo}/> : <p><center>No items added.</center></p>}
+        {todoItems.length > 0 && <ToDoItems  items = {todoItems} deleteToDo={deleteToDo}/>}
+        </div>
         </div>
     );
 }
