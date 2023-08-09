@@ -53,3 +53,7 @@ border: 2px solid white;
 input[type=checkbox]:checked + h5{
     text-decoration: line-through;
 }
+
+.todo-count{
+    margin-top: 10px;
+}

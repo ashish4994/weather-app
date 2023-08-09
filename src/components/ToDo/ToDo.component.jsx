@@ -49,6 +49,7 @@ function ToDo() {
             <button type="submit" className='plus-button'><AiOutlinePlus /></button>
           </Form>
         {todoItems.length > 0 && <ToDoItems  items = {todoItems} deleteToDo={deleteToDo}/>}
+        {todoItems.length > 0 && <p className='todo-count'> You have {todoItems.length} todos.</p>}
         </div>
         </div>
     );
